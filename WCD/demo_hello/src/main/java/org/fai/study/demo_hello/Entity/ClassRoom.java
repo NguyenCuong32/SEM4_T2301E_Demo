@@ -11,12 +11,12 @@ public class ClassRoom {
     private int id;
 
     private String class_name;
-    private String number_member;
+    private Integer number_member;
 
     public ClassRoom() {
     }
 
-    public ClassRoom(String class_name, int id, String number_member) {
+    public ClassRoom(String class_name, int id, Integer number_member) {
         this.class_name = class_name;
         this.id = id;
         this.number_member = number_member;
@@ -38,11 +38,11 @@ public class ClassRoom {
         this.id = id;
     }
 
-    public String getNumber_member() {
+    public Integer getNumber_member() {
         return number_member;
     }
 
-    public void setNumber_member(String number_member) {
+    public void setNumber_member(Integer number_member) {
         this.number_member = number_member;
     }
 }

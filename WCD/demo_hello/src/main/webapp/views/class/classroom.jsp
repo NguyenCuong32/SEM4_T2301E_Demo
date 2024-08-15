@@ -27,6 +27,25 @@
     <%@ include file="../../include/header.jsp" %>
 </header>
 <body>
+<div>
+    <h3>Add classroom</h3>
+    <form action="classroom" method="post">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Class name</span>
+            </div>
+            <input type="text" id="class_name" name="class_name" class="form-control" aria-label="Class name" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Number</span>
+            </div>
+            <input type="number" id="number_member" name="number_member" class="form-control" aria-label="Number" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-secondary" type="button">Reset</button>
+    </form>
+</div>
 <table class="table">
     <thead>
     <th>Id</th>
