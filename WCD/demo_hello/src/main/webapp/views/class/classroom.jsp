@@ -51,6 +51,7 @@
     <th>Id</th>
     <th>Class Name</th>
     <th>Number</th>
+    <th>Action</th>
     </thead>
     <tbody>
     <%
@@ -61,6 +62,19 @@
         <td><%= classRoom.getId()%></td>
         <td><%=classRoom.getClass_name()%></td>
         <td><%=classRoom.getNumber_member()%></td>
+        <td>
+            <div style="display: flex; gap: 10px;">
+                <form action="classroom" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="id" value= "<%=classRoom.getId()%>">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                <form action="classroom" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+            </div>
+        </td>
     </tr>
     <%
         }%>
