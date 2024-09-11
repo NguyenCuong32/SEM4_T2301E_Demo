@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="org.fai.study.demo_hello.Entity.ClassRoom" %><%--
+<%@ page import="org.fai.study.demo_hello.entity.ClassRoom" %><%--
   Created by IntelliJ IDEA.
   User: cuongnguyen
   Date: 12/08/2024
@@ -59,14 +59,14 @@
         for (ClassRoom classRoom : classRooms) {
     %>
     <tr role="row">
-        <td><%= classRoom.getId()%></td>
+        <td><%= classRoom.getId_class()%></td>
         <td><%=classRoom.getClass_name()%></td>
         <td><%=classRoom.getNumber_member()%></td>
         <td>
             <div style="display: flex; gap: 10px;">
                 <form action="classroom" method="post">
                     <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="id" value= "<%=classRoom.getId()%>">
+                    <input type="hidden" name="id" value= "<%=classRoom.getId_class()%>">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
                 <form action="classroom" method="post">

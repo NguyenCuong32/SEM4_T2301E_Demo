@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.fai.study.demo_hello.Entity.ClassRoom;
+import org.fai.study.demo_hello.entity.ClassRoom;
 
 import java.io.IOException;
 @WebServlet("/classroom")

@@ -21,4 +21,9 @@ public class ClassRoomService implements IClassRoomService {
     public void saveClassRoom(ClassRoom classRoom) {
         classRoomRepository.save(classRoom);
     }
+
+    @Override
+    public void removeClassRoom(ClassRoom classRoom) {
+        classRoomRepository.delete(classRoom);
+    }
 }

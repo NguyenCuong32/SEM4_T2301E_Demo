@@ -1,4 +1,4 @@
-package org.fai.study.demo_hello.Entity;
+package org.fai.study.demo_hello.entity;
 
 import jakarta.persistence.*;
 
@@ -8,7 +8,7 @@ public class ClassRoom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int id;
+    private int id_class;
 
     private String class_name;
     private Integer number_member;
@@ -18,7 +18,7 @@ public class ClassRoom {
 
     public ClassRoom(String class_name, int id, Integer number_member) {
         this.class_name = class_name;
-        this.id = id;
+        this.id_class = id;
         this.number_member = number_member;
     }
 
@@ -30,12 +30,12 @@ public class ClassRoom {
         this.class_name = class_name;
     }
 
-    public int getId() {
-        return id;
+    public int getId_class() {
+        return id_class;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_class(int id) {
+        this.id_class = id;
     }
 
     public Integer getNumber_member() {

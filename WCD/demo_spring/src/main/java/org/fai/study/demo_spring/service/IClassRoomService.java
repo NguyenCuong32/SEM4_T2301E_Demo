@@ -8,4 +8,5 @@ public interface IClassRoomService {
     List<ClassRoom> getClassRooms();
 
    void saveClassRoom(ClassRoom classRoom);
+   void removeClassRoom(ClassRoom classRoom);
 }
