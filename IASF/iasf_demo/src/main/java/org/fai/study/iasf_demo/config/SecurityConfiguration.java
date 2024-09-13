@@ -28,7 +28,9 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(
                 cfg -> cfg.requestMatchers("classroom/**").hasAnyRole("ADMIN")
                            .anyRequest()
-                          .authenticated())
+                            .permitAll()
+
+                )
                 .formLogin(
                         form -> form.loginPage("/login")
                         .loginProcessingUrl("/loginProcess"
