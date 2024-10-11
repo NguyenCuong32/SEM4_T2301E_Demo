@@ -22,10 +22,17 @@ public class AuthController {
         this.tokenService = tokenService;
         this.authenticationManager = authenticationManager;
     }
+    @GetMapping("/test")
+    public  String Test(){
+        return "Test auth";
+    }
+
     @GetMapping("/token")
-    public Token GenerateToken(@RequestBody UserLogin userLogin) throws AuthenticationException {
+    public Token token(@RequestBody UserLogin userLogin) throws AuthenticationException {
         Authentication authentication = authenticationManager
                 .authenticate(new UsernamePasswordAuthenticationToken(userLogin.getUsername(), userLogin.getPassword()));
         return new Token(tokenService.generateToken(authentication));
+//        return  new Token("123");
+
     }
 }
